@@ -8,7 +8,7 @@ const AdoptionRoutes = require('./routes/AdoptionRoutes'); // match name exactly
 const ServiceRoutes=require('./routes/ServiceRoutes');
 const feedbacks=require('./routes/FeeddbackRoutes');
 const app = express();
-app.use(cors({ origin: '*' }));
+app.use(cors({ origin: 'https://your-frontend.onrender.com' }));
 app.use(express.json());
 
 // Connect to MongoDB
