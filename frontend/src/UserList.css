@@ -1,0 +1,187 @@
+/* .user-list-container {
+  padding: 20px;
+  max-width: 100%;
+  overflow-x: auto;
+  font-family: Arial, sans-serif;
+}
+
+.user-list-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+.loading {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.user-table thead {
+  background-color: #f4f4f4;
+}
+
+.user-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.no-users {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+}
+
+.delete-btn {
+  padding: 6px 12px;
+  background-color: #dc3545;
+  color: white;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #b02a37;
+} */
+
+
+.user-list-container {
+  padding: 20px;
+  max-width: 100%;
+  overflow-x: auto; /* still allows scroll for extremely narrow screens */
+  font-family: Arial, sans-serif;
+}
+
+.user-list-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+.loading {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.user-table thead {
+  background-color: #f4f4f4;
+}
+
+.user-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.no-users {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+}
+
+.delete-btn {
+  padding: 6px 12px;
+  background-color: #dc3545;
+  color: white;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #b02a37;
+}
+@media (max-width: 768px) {
+  .user-table, 
+  .user-table thead, 
+  .user-table tbody, 
+  .user-table th, 
+  .user-table td, 
+  .user-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .user-table {
+    border: none;
+  }
+
+  .user-table thead {
+    display: none; /* Hide headers on mobile */
+  }
+
+  .user-table tr {
+    background: white;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .user-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 0.95rem;
+    border: none;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word;
+  }
+
+  .user-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #555;
+    flex: 1;
+    max-width: 45%;
+  }
+
+  .user-table td:last-child {
+    justify-content: center;
+  }
+
+  .delete-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    font-size: 1rem;
+  }
+}
