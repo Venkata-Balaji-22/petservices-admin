@@ -27,9 +27,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/adoptionforms', AdoptionRoutes);
 app.use('/api/bookings', ServiceRoutes);
 app.use('/api/feedbacks', feedbacks);
-app.get('*', (req, res) => {
-  res.redirect('/');
-});
+
 
 app.get('/test', (req, res) => {
   res.send('Backend is working');
