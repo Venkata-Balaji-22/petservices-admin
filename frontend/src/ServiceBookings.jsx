@@ -10,7 +10,7 @@ const ServiceBookings = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('${process.env.REACT_APP_API_URL}/api/bookings');
+        const response = await axios.get('https://petservices-admin-backend.onrender.com/api/bookings');
         setUsers(response.data);
       } catch (error) {
         console.error('Error fetching bookings:', error);
@@ -23,7 +23,7 @@ const ServiceBookings = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/api/bookings/${id}`);
+      await axios.delete(`https://petservices-admin-backend.onrender.com/api/bookings/${id}`);
       setUsers(users.filter(user => user._id !== id));
     } catch (error) {
       console.error('Error deleting booking:', error);
