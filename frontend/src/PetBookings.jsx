@@ -10,7 +10,7 @@ const PetBookings = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('/api/adoptionforms');
+        const response = await axios.get('${process.env.REACT_APP_API_URL}/api/adoptionforms');
         setUsers(response.data);
       } catch (error) {
         console.error('Error fetching users:', error);
