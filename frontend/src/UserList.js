@@ -196,7 +196,7 @@ const UserList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`api/users/${id}`);
+      await axios.delete(`https://petservices-admin-backend.onrender.com/api/users/${id}`);
       setUsers(users.filter(user => user._id !== id));
     } catch (error) {
       console.error('Error deleting user:', error);
