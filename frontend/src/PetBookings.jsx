@@ -10,7 +10,7 @@ const PetBookings = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('${process.env.REACT_APP_API_URL}/api/adoptionforms');
+        const response = await axios.get('https://petservices-admin-backend.onrender.com/api/adoptionforms');
         setUsers(response.data);
       } catch (error) {
         console.error('Error fetching users:', error);
@@ -23,7 +23,7 @@ const PetBookings = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/api/adoptionforms/${id}`);
+      await axios.delete(`https://petservices-admin-backend.onrender.com/api/adoptionforms/${id}`);
       setUsers(users.filter(user => user._id !== id));
     } catch (error) {
       console.error('Error deleting user:', error);
