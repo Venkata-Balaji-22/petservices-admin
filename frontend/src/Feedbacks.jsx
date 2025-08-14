@@ -10,7 +10,7 @@ const Feedbacks = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('/api/feedbacks');
+        const response = await axios.get('${process.env.REACT_APP_API_URL}/api/feedbacks');
         setUsers(response.data);
       } catch (error) {
         console.error('Error fetching feedbacks:', error);
