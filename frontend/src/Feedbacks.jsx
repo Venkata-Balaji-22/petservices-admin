@@ -10,7 +10,7 @@ const Feedbacks = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('${process.env.REACT_APP_API_URL}/api/feedbacks');
+        const response = await axios.get('https://petservices-admin-backend.onrender.com/api/feedbacks');
         setUsers(response.data);
       } catch (error) {
         console.error('Error fetching feedbacks:', error);
@@ -23,7 +23,7 @@ const Feedbacks = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/api/feedbacks/${id}`);
+      await axios.delete(`https://petservices-admin-backend.onrender.com/api/feedbacks/${id}`);
       setUsers(users.filter(user => user._id !== id));
     } catch (error) {
       console.error('Error deleting feedbacks:', error);
